@@ -1,0 +1,12 @@
+<hr /><hr /><br />
+<div>
+    <div>
+        <form [formGroup] = "createTodoForm" (ngSubmit) = "onSubmit()">
+            <span>TodoName</span><br/>
+            <input formControlName = "todoName" type = "text" placeholder="input-name"><br/><br/>
+
+
+            <button>Create Todo</button>
+        </form>
+    </div>
+</div>

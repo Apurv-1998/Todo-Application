@@ -1,0 +1,20 @@
+<hr /><hr /><br />
+<div>
+    <div *ngIf = "(getCurrentDate() | date: 'dd/MM/yyyy') > (activityResponse.endDate | date: 'dd/MM/yyyy') ">
+        <s> {{activityResponse.activityName}} </s>
+        <p>Completed : <s>{{activityResponse.text}}</s></p>
+    </div>
+
+    <div *ngIf = "(activityResponse.endDate|date: 'dd/MM/yyyy') >= (getCurrentDate() | date: 'dd/MM/yyyy')">
+        <b><u>{{activityResponse.activityName}}</u></b> Details.<br/><br/>
+        <div >
+            <ul>
+                <li [innerHTML] = "activityResponse.text"> To Be Done: -> {{activityResponse.text}}</li><br/><br/>
+                <li> Start Date: -> {{activityResponse.startDate | date: 'fullDate'}}</li>
+                <li> End Date: -> {{activityResponse.endDate | date: 'fullDate'}}</li>
+            
+            </ul>
+            <b>Activity Created Under {{activityResponse.todoName}} Todo: {{activityResponse.duration}}</b>
+        </div>
+    </div>
+</div>

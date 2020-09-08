@@ -1,0 +1,24 @@
+<hr />
+
+<div>
+    <div>
+        <form [formGroup] = "signupForm" (ngSubmit) = "onSubmit()">
+            <span>FirstName</span>
+            <input formControlName = "firstName" type = "text" placeholder="John"><br>
+            <span>LastName</span>
+            <input formControlName = "lastName" type = "text" placeholder="Doe"><br>
+            <span>Date of Birth</span>
+            <input formControlName = "dob" type = "date"><br>
+            <span>password</span>
+            <input formControlName = "password" type = "password"><br>
+            <span>email</span>
+            <input formControlName = "email" type = "text" placeholder="email"><br>
+
+            <button>Submit</button>
+
+        </form>
+        
+        <button (click) = "discard()">Discard</button>
+    </div>
+</div>
+

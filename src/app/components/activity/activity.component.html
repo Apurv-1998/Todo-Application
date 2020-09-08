@@ -1,0 +1,17 @@
+<hr /><hr /><br />
+<div>
+    <div>
+    <span>All Activities In The Todo -> <ul><b>{{ todoName }}</b></ul></span>
+        <ul class = "main-content" *ngFor = "let temp of activityResponse">
+
+            <!-- Add Router Link For Activity Details-->
+
+            <li><a routerLink = "/activityDetails/{{temp.activityId}}">{{temp.activityName}}</a></li>
+
+        </ul>
+    </div>
+    <div>
+        <span>Want To Create New Activity!!!</span><br/>
+        <button (click) = "routeToCreateActivity(todoId)">Create Activity</button>
+    </div>
+</div>

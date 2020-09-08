@@ -1,0 +1,14 @@
+<hr />
+
+<div>
+    <div>
+        <form [formGroup] = "userLoginForm" (ngSubmit) = "onSubmit()">
+            <span>UserName</span>
+            <input formControlName = "userName" type = "text" placeholder="username"><br/>
+            <span>Password</span>
+            <input formControlName = "password" type = "password"><br/>
+            <button>Login</button>
+        </form>
+        <button (click) = "discard()">Discard</button>
+    </div>
+</div>

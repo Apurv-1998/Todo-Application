@@ -1,0 +1,16 @@
+<hr /><hr /><br />
+<div>
+    <span> List Of All Todos</span><br/><br />
+    <div *ngFor = "let temp of todoResponse">
+
+        <!-- Add a Router Link For Specific Todo Details -> Show all the activities -->
+        <a routerLink = "/showActivities/{{temp.todoId}}">{{ temp.todoName }}</a>
+
+    </div>
+    <div>
+        <hr /><hr /><br />
+        Want To Create a New Todo <br/>
+
+        <button (click) = "routeToCreateTodo(userId)">Create Todo</button>
+    </div>
+</div>

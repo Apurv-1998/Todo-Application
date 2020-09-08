@@ -1,0 +1,36 @@
+<hr/><hr/><br/>
+
+<div>
+    <b>Create New Activity:</b><br /><br />
+    <!-- Add Form Group and ngSubmit -->
+    <form [formGroup] = "activityForm" (ngSubmit) = "onSubmit()">
+        <!--Add Form Control Name-->
+        Activity Name<br />
+        <input formControlName = "activityName" type = "text" placeholder="name"><br/>
+
+        <!--Add Form Control Name-->
+        Start Date<br/>
+        <input formControlName = "startDate" type = "date"><br/>
+
+        <!--Add Form Control Name-->
+        End Date<br/>
+        <input formControlName = "endDate" type = "date"><br/>
+
+        <!--Add Form Control Name-->
+        Activity Details<br/>
+        <editor formControlName = "text" [init]="{
+            height: 500,
+            menubar: false,
+            plugins: [
+              'advlist autolink lists link image charmap print preview anchor',
+              'searchreplace visualblocks code fullscreen',
+              'insertdatetime media table paste code help wordcount'
+            ],
+            toolbar:
+              'undo redo | formatselect | bold italic backcolor | \
+              alignleft aligncenter alignright alignjustify | \
+              bullist numlist outdent indent | removeformat | help'
+          }"></editor><br/><br/><br/>
+          <button>Create Activity</button>
+    </form>
+</div>
